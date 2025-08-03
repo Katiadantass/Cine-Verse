@@ -1,0 +1,33 @@
+@use 'variaveis';
+
+.trailer {
+  background-color: #111;
+  color: variaveis.$corTextoPrincipal;
+  padding: variaveis.$espacamento-grande 0;
+  text-align: center;
+
+  &__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 variaveis.$espacamento-medio;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: variaveis.$espacamento-medio;
+  }
+
+  &__video {
+    width: 100%;
+    height: 480px;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  }
+
+  @media (max-width: variaveis.$tablet) {
+    &__video {
+      height: 250px;
+    }
+  }
+}

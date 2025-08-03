@@ -1,0 +1,32 @@
+@use 'variaveis';
+
+.curiosidades {
+  background-color: #111;
+  color: variaveis.$corTextoPrincipal;
+  padding: variaveis.$espacamento-grande 0;
+
+  &__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 variaveis.$espacamento-medio;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: variaveis.$espacamento-medio;
+    text-align: center;
+  }
+
+  &__lista {
+    list-style: disc inside;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center; // <-- centraliza o conteúdo textual
+  }
+
+  &__item {
+    margin-bottom: variaveis.$espacamento-pequeno;
+  }
+}

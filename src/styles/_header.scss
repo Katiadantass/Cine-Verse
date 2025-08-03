@@ -1,0 +1,101 @@
+@use 'variaveis';
+
+.header {
+  background-color: #000;
+  padding: 1rem 0;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: variaveis.$corTextoPrincipal;
+    display: flex;
+    flex-direction: column;
+
+    .header__slogan {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: variaveis.$corTextoSecundario;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 1rem;
+
+    &__item {
+      .button {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+
+        &--secondary {
+          background-color: variaveis.$corDeFundoBotaoSecundario;
+          color: variaveis.$corTextoPrincipal;
+
+          &:hover {
+            background-color: darken(variaveis.$corDeFundoBotaoSecundario, 10%);
+          }
+        }
+
+        &--dark {
+          background-color: variaveis.$corDeFundoBotaoDark;
+          color: variaveis.$corTextoPrincipal;
+
+          &:hover {
+            background-color: lighten(variaveis.$corDeFundoBotaoDark, 10%);
+          }
+        }
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: variaveis.$corTextoPrincipal;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    padding: 1rem;
+
+    &.active {
+      display: flex;
+    }
+
+    a {
+      color: variaveis.$corTextoPrincipal;
+      padding: 0.5rem 0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}

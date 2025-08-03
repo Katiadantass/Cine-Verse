@@ -1,0 +1,50 @@
+@use 'variaveis';
+
+.sobre {
+  background-color: #111;
+  color: variaveis.$corTextoPrincipal;
+  padding: variaveis.$espacamento-grande 0;
+
+  &__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 variaveis.$espacamento-medio;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: variaveis.$espacamento-medio;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: variaveis.$espacamento-medio;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+  }
+
+  &__text {
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: variaveis.$tablet) {
+    &__content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__text, &__image {
+      max-width: 100%;
+    }
+  }
+}

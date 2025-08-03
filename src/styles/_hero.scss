@@ -1,0 +1,47 @@
+@use 'variaveis';
+
+.hero {
+  background-image: url('../images/suits-cover.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  padding: 5.6vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: variaveis.$corTextoPrincipal;
+
+  &__content {
+    max-width: 640px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: variaveis.$espacamento-medio;
+    border-radius: 8px;
+  }
+
+  &__title {
+    font-size: 3rem;
+    margin-bottom: variaveis.$espacamento-medio;
+  }
+
+  &__description {
+    font-size: 1.2rem;
+    color: variaveis.$corTextoSecundario;
+    margin-bottom: calc(variaveis.$espacamento-grande / 2);
+  }
+
+  &__button {
+    background-color: variaveis.$corDeFundoBotaoPrimario;
+    color: variaveis.$corTextoPrincipal;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken(variaveis.$corDeFundoBotaoPrimario, 10%);
+    }
+  }
+}
