@@ -1,7 +1,7 @@
 @use 'variaveis';
 
 .curiosidades {
-  background-color: #111;
+  background-color: variaveis.$corDeFundoBotaoDark;
   color: variaveis.$corTextoPrincipal;
   padding: variaveis.$espacamento-grande 0;
 
@@ -23,7 +23,7 @@
     line-height: 1.5;
     max-width: 700px;
     margin: 0 auto;
-    text-align: center; // <-- centraliza o conteúdo textual
+    text-align: center;
   }
 
   &__item {

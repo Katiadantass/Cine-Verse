@@ -1,6 +1,7 @@
 @use 'variaveis';
 
 .footer {
+    background-color: variaveis.$corDeFundoBotaoDark;
     padding: 26px 8px;
 
     &__container {
@@ -22,7 +23,7 @@
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
-        
+
         &__item {
             display: inline-block;
 

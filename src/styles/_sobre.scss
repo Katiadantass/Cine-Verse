@@ -1,7 +1,7 @@
 @use 'variaveis';
 
 .sobre {
-  background-color: #111;
+  background-color: variaveis.$corDeFundoBotaoDark;
   color: variaveis.$corTextoPrincipal;
   padding: variaveis.$espacamento-grande 0;
 

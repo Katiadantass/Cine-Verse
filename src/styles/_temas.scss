@@ -1,7 +1,7 @@
 @use 'variaveis';
 
 .temas {
-  background-color: #000;
+  background-color: variaveis.$corDeFundo;
   color: variaveis.$corTextoPrincipal;
   padding: variaveis.$espacamento-grande 0;
 

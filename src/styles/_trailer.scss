@@ -1,7 +1,7 @@
 @use 'variaveis';
 
 .trailer {
-  background-color: #111;
+  background-color: variaveis.$corDeFundoBotaoDark;
   color: variaveis.$corTextoPrincipal;
   padding: variaveis.$espacamento-grande 0;
   text-align: center;
@@ -25,7 +25,7 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.7);
   }
 
-  @media (max-width: variaveis.$tablet) {
+  @media (max-width: #{variaveis.$tablet}) {
     &__video {
       height: 250px;
     }
